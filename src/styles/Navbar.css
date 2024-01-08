@@ -89,8 +89,17 @@
 
 @media only screen and (max-width: 400px) {
   .navbar #open .hiddenLinks {
-    display: inherit;
-    width: 2rem;
-    font-size: 0.8rem;
+   display: flex;
+   flex-direction: column;
+   margin-top: 15rem;
+   background-color: #146956;
+   text-align: center;
+   margin-left: 10rem;
+  }
+
+  .navbar #open .hiddenLinks a:hover {
+    background-color: #cab08f;
+    border-radius: 0.2rem;
+    opacity: 0.9;
   }
 }

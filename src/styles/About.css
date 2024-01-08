@@ -44,3 +44,14 @@
 @media only screen and (max-width: 650px) {
 
 }
+
+@media only screen and (max-width: 400px) {
+  .aboutBottom p{
+    font-size: 0.8rem;
+    padding: 2rem;
+  }
+
+  .about .aboutBottom h1 {
+    font-size: 3rem;
+  }
+}
