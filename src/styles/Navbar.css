@@ -86,3 +86,11 @@
     display: inherit;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .navbar #open .hiddenLinks {
+    display: inherit;
+    width: 2rem;
+    font-size: 0.8rem;
+  }
+}
