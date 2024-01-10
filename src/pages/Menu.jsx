@@ -1,13 +1,17 @@
 import React from "react";
 import { MenuList } from "../helpers/MenuList";
+
+import { motion } from 'framer-motion';
+
 import MenuItem from "../components/MenuItem";
 import "../styles/Menu.css";
+import { fadeAnimation, headTextAnimation } from "../helpers/motion";
 
 function Menu() {
   return (
     <div className="menu">
-      <h1 className="menuTitle">Our Menu</h1>
-      <div className="menuList">
+      <motion.h1 {...headTextAnimation} className="menuTitle">Our Menu</motion.h1>
+      <motion.div {...fadeAnimation} className="menuList">
         {MenuList.map((menuItem, key) => {
           return (
             <MenuItem
@@ -18,7 +22,7 @@ function Menu() {
             />
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

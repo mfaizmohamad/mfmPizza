@@ -1,16 +1,21 @@
 import React from "react";
+
+import { motion } from 'framer-motion';
+
 import MultiplePizzas from "../assets/multiplePizzas.jpeg";
 import "../styles/About.css";
+import { fadeAnimation, headContentAnimation, headTextAnimation, slideAnimation } from "../helpers/motion";
 function About() {
   return (
     <div className="about">
-      <div
+      <motion.div
+        {...slideAnimation("down")}
         className="aboutTop"
         style={{ backgroundImage: `url(${MultiplePizzas})` }}
-      ></div>
+      ></motion.div>
       <div className="aboutBottom">
-        <h1> ABOUT US</h1>
-        <p>
+        <motion.h1 {...headTextAnimation}> ABOUT US</motion.h1>
+        <motion.p {...headContentAnimation}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
           mollitia, molestiae quas vel sint commodi repudiandae consequuntur
           voluptatum laborum numquam blanditiis harum quisquam eius sed odit
@@ -24,7 +29,7 @@ function About() {
           recusandae alias error harum maxime adipisci amet laborum.
           Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a
           cumque velit
-        </p>
+        </motion.p>
       </div>
     </div>
   );

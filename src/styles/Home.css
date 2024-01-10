@@ -12,8 +12,9 @@
 
 .headerContainer {
   width: auto;
-  margin-left: 50px
-  
+  margin-left: 50px;
+  margin-top: 10rem;
+  z-index: 10;
 }
 
 .headerContainer h1 {
@@ -48,6 +49,12 @@
   cursor: pointer;
   transition: 0.3s ease-in;
   width: 11rem;
+}
+
+.pizza {
+  z-index: 0;
+  height: 20rem;
+  margin-top: -4rem;
 }
 
 @media only screen and (max-width: 650px) {
@@ -93,5 +100,17 @@
     background-color: rgb(225, 225, 225);
     color: #121619;
     width: 11rem;
+  }
+
+  .pizza {
+    margin-left: 30rem;
+    margin-top: 2rem;
+    width: 100rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .pizza {
+    margin-left: 40rem;
   }
 }

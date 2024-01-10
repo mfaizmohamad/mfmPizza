@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/mfmPizza/",
   plugins: [react()],
+  assetsInclude: ['**/*.glb'],
 })

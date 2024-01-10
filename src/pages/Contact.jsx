@@ -1,18 +1,22 @@
 import React from "react";
+import { motion } from 'framer-motion';
+
 import PizzaLeft from "../assets/pizzaLeft.jpg";
 import "../styles/Contact.css";
+import { headTextAnimation, slideAnimation } from "../helpers/motion";
 
 function Contact() {
   return (
     <div className="contact">
-      <div
+      <motion.div
+        {...slideAnimation('left')}
         className="leftSide"
         style={{ backgroundImage: `url(${PizzaLeft})` }}
-      ></div>
+      ></motion.div>
       <div className="rightSide">
-        <h1> Contact Us</h1>
+        <motion.h1 {...headTextAnimation}> Contact Us</motion.h1>
 
-        <form id="contact-form" method="POST">
+        <motion.form {...slideAnimation("up")} id="contact-form" method="POST">
           <label htmlFor="name">Full Name</label>
           <input name="name" placeholder="Enter full name..." type="text" />
           <label htmlFor="email">Email</label>
@@ -25,7 +29,7 @@ function Contact() {
             required
           ></textarea>
           <button type="submit"> Send Message</button>
-        </form>
+        </motion.form>
       </div>
     </div>
   );
